@@ -226,7 +226,7 @@ private func subscribePush (account: String, sessionID: String, token: String) {
             DispatchQueue.main.async {
   
                 let status = LibInitStatus()
-                let observer = LibInitObserver (object: status)
+                let _ = LibInitObserver (object: status)
                 status.statusName = "init"
             }
             
@@ -287,7 +287,7 @@ public func addContact (subscriberInfo: [String:Any]) {
             
             print ("nolibraryInit")
             let status = AddContactRequestStatus()
-            let observer = AddContactRequestObserver(object: status)
+            let _ = AddContactRequestObserver(object: status)
             status.status = "request"
             
             
@@ -723,7 +723,7 @@ public func productBuy (order: Order) {
             
             //print(json)
             
-        } else if let error = error {
+        } else if error != nil {
             
         }
     }.resume()
