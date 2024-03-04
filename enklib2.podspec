@@ -6,6 +6,8 @@
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
 
+Pod::Spec.new do |spec|
+
   spec.name         = "enklib2"
 
   spec.version      = "1.0.0"
